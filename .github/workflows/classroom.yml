@@ -29,9 +29,8 @@ jobs:
 
       - name: Download latest test files
         run: |
-          mkdir -p .github/tests
-          curl -o .github/tests/test_assignment.py \
-            https://raw.githubusercontent.com/christopherseaman/ds223-26w-hw07/refs/heads/main/.github/tests/test_assignment.py || true
+          curl -o .github/tests/test_assignment.py https://raw.githubusercontent.com/christopherseaman/ds223-26w-hw07/refs/heads/main/.github/tests/requirements.txt || true
+          curl -o .github/tests/test_assignment.py https://raw.githubusercontent.com/christopherseaman/ds223-26w-hw07/refs/heads/main/.github/tests/test_assignment.py || true
 
       - name: Run tests
         run: |
